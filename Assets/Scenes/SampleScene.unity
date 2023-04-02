@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8216935469805130585, guid: d4b741c43ed8c4f47912481490bfcbef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: -0.53
       objectReference: {fileID: 0}
     - target: {fileID: 8216935469805130585, guid: d4b741c43ed8c4f47912481490bfcbef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -282,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8216935469805130585, guid: d4b741c43ed8c4f47912481490bfcbef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.23999989
+      value: -1.27
       objectReference: {fileID: 0}
     - target: {fileID: 8216935469805130585, guid: d4b741c43ed8c4f47912481490bfcbef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -770,6 +770,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2094612975746377453, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f0e2761c07d40f45b731f36ddc470d7, type: 2}
     - target: {fileID: 2276754825202227313, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: m_Name
       value: Bird
@@ -861,7 +865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8216935469805130585, guid: d4b741c43ed8c4f47912481490bfcbef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3600001
+      value: 1.73
       objectReference: {fileID: 0}
     - target: {fileID: 8216935469805130585, guid: d4b741c43ed8c4f47912481490bfcbef, type: 3}
       propertyPath: m_LocalPosition.z
