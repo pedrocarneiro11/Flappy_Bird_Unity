@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ec5ddb8f0e65342986adf143c61e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameActive: 1
   obstaclePrefabs:
   - {fileID: 8216935469805130582, guid: d4b741c43ed8c4f47912481490bfcbef, type: 3}
   obstacleInterval: 1.5
@@ -690,11 +691,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5939505232894809616, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: jumpPower
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -5939505232894809616, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: jumpInterval
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2276754825202227313, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: m_Name
@@ -703,6 +704,18 @@ PrefabInstance:
     - target: {fileID: 5001979168674719458, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001979168674719458, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001979168674719458, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001979168674719458, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5001979168674719458, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -714,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5001979168674719458, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 5001979168674719458, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -746,7 +759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7115680681891638473, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d8e9f8156596754f8fa9f02e4d80d2d, type: 3}

@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     {
         // Uppdate cooldown
         jumpCooldown -= Time.deltaTime;
-        bool canJump = jumpCooldown <= 0;
+        bool isGameActive = GameManager.Instance.IsGameActive();
+        bool canJump = jumpCooldown <= 0 && isGameActive;
 
         // Jump
         if (canJump){            
@@ -29,7 +30,16 @@ public class PlayerController : MonoBehaviour
             if (jumpInput){                
                 Jump();                
             }
-        }  
+        } 
+
+        //Toggle gravity
+        thisRigidbody.useGravity = isGameActive; 
+
+        // Freeze Rigidbody if game is over
+        if(!isGameActive) {
+            thisRigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
+        }        
+        
     }
 
     void OnCollisionEnter(Collision other) {
@@ -43,16 +53,13 @@ public class PlayerController : MonoBehaviour
     private void OnCustomCollisionEnter(GameObject other) {
         bool isSensor = other.CompareTag("Sensor");
         if (isSensor) {
-            Debug.Log("ponto");
+            GameManager.Instance.score++;
+            Debug.Log("Placar: "+GameManager.Instance.score);
             
         } else {
             // Game Over
-            Debug.Log("Game Over");
-
-            GameManager.Instance.isGameActive = false;
-            
+            GameManager.Instance.EndGame();         
         }
-
     }
 
     private void Jump() {

@@ -13,12 +13,21 @@ public class ObstacleMover : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // Get GameManager
+        var gameManager = GameManager.Instance;
+
+        //Ignore if game is over
+        if(gameManager.IsGameOver())
+        {
+            return;
+        }
+
         // Move Object
-        float x = GameManager.Instance.obstacleSpeed * Time.fixedDeltaTime;
+        float x = gameManager.obstacleSpeed * Time.fixedDeltaTime;
         transform.position -= new Vector3(x,0,0);  
 
         // Destroy Object
-        if (transform.position.x <= -GameManager.Instance.obstacleOffsetX) 
+        if (transform.position.x <= -gameManager.obstacleOffsetX) 
         {
             Destroy(gameObject);
         }     
