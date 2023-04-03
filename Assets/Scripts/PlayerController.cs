@@ -55,8 +55,8 @@ public class PlayerController : MonoBehaviour
         if (isSensor) {
             GameManager.Instance.score++;
             Debug.Log("Placar: "+GameManager.Instance.score);
-            if(GameManager.Instance.score%10 == 0) {
-                GameManager.Instance.obstacleSpeed = GameManager.Instance.obstacleSpeed * 1.2f; 
+            if(GameManager.Instance.score%10 == 0 && GameManager.Instance.score !=0) {
+                GameManager.Instance.obstacleSpeed = GameManager.Instance.obstacleSpeed * 1.3f; 
             }
             
         } else {
