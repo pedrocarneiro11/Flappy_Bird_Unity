@@ -31,6 +31,30 @@ public class PlayerController : MonoBehaviour
             }
         }  
     }
+
+    void OnCollisionEnter(Collision other) {
+        OnCustomCollisionEnter(other.gameObject);
+    }
+
+    void OnTriggerEnter(Collider other) {
+        OnCustomCollisionEnter(other.gameObject);        
+    }
+
+    private void OnCustomCollisionEnter(GameObject other) {
+        bool isSensor = other.CompareTag("Sensor");
+        if (isSensor) {
+            Debug.Log("ponto");
+            
+        } else {
+            // Game Over
+            Debug.Log("Game Over");
+
+            GameManager.Instance.isGameActive = false;
+            
+        }
+
+    }
+
     private void Jump() {
         jumpCooldown = jumpInterval;
 

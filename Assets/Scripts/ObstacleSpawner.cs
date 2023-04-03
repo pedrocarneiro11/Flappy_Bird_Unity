@@ -17,7 +17,11 @@ public class ObstacleSpawner : MonoBehaviour
     {
         var gameManager = GameManager.Instance;
         cooldown -= Time.deltaTime;
-        
+
+        if(!GameManager.Instance.isGameActive) {
+            return;
+        } 
+
         if (cooldown <= 0f) 
         {
             cooldown = gameManager.obstacleInterval;
